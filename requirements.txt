@@ -126,6 +126,7 @@ pynvim
 pynvml
 pyOpenSSL
 pyparsing
+pyright
 pyrsistent
 PySocks
 python-dateutil
