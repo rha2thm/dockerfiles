@@ -1,6 +1,7 @@
 FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-runtime
 
 RUN apt update && apt install -y \
+      sudo \
       gcc \
       curl \
       zsh \
@@ -12,7 +13,7 @@ RUN add-apt-repository ppa:neovim-ppa/stable
 RUN apt update && apt install -y neovim
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-RUN chsh -s 'whcih zsh'
+RUN sudo chsh -s 'whcih zsh'
 
 RUN curl -sLf https://spacevim.org/install.sh | bash
 
