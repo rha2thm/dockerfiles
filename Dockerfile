@@ -4,9 +4,12 @@ RUN apt update && apt install -y \
       gcc \
       curl \
       zsh \
-      neovim \
       tree \
-      git
+      git \
+      software-properties-common
+
+RUN add-apt-repository ppa:neovim-ppa/stable
+RUN apt update && apt install -y neovim
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 RUN chsh -s 'whcih zsh'
