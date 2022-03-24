@@ -8,6 +8,7 @@ RUN apt update && apt install -y \
       zsh \
       tree \
       git \
+      python3-opencv \
       software-properties-common
 
 RUN add-apt-repository ppa:neovim-ppa/stable
