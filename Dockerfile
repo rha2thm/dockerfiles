@@ -18,6 +18,9 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 RUN chsh -s /usr/bin/zsh
 
 RUN curl -sLf https://spacevim.org/install.sh | bash
+WORKDIR /root
+RUN git clone https://github.com/rha2thm/SpaceVimConfigs.git
+RUN mv -f SpaceVimConfigs .SpaceVim.d
 
 COPY requirements.txt /tmp
 RUN pip install --upgrade pip
