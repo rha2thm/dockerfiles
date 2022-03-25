@@ -8,6 +8,7 @@ RUN apt update && apt install -y \
       zsh \
       tree \
       git \
+      tmux \
       python3-opencv \
       software-properties-common
 
